@@ -19,9 +19,16 @@ public class ResumeUpdatePageTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
-        options.addArguments("--headless=new");
+//        options.addArguments("--headless=new");
+
+        options.addArguments("--window-size=1920,1080");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.naukri.com/");
+        System.out.println("URL: " + driver.getCurrentUrl());
+        System.out.println("TITLE: " + driver.getTitle());
         By element = By.id("login_Layer");
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement loginLayer = wait.until(ExpectedConditions.elementToBeClickable(element));
