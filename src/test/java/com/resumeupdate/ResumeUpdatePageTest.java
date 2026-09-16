@@ -45,7 +45,7 @@ public class ResumeUpdatePageTest {
         }
 
         driver.findElement(By.id("keySkillSugg")).sendKeys("selenium");
-
+        driver.findElement(By.id("keySkillSugg")).sendKeys("Java");
         driver.findElement(By.xpath("//button[text()='Save']")).click();
         List<WebElement> elements = driver.findElements(By.xpath("(//span[text()='CrossLayer'])[7]"));
         if(!elements.isEmpty()){
