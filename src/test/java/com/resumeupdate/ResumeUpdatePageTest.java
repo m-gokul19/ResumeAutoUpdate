@@ -1,4 +1,4 @@
-package com.resumeupdatetest;
+package com.resumeupdate;
 import com.testngclass.RetryAnalyzer;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
@@ -47,7 +47,10 @@ public class ResumeUpdatePageTest {
         driver.findElement(By.id("keySkillSugg")).sendKeys("selenium");
 
         driver.findElement(By.xpath("//button[text()='Save']")).click();
-        WebElement cross = driver.findElement(By.xpath("(//span[text()='CrossLayer'])[7]"));
-        cross.click();
+        List<WebElement> elements = driver.findElements(By.xpath("(//span[text()='CrossLayer'])[7]"));
+        if(!elements.isEmpty()){
+            elements.get(0).click();
+        }
+
     }
 }
