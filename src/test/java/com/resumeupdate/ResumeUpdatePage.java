@@ -1,4 +1,4 @@
-package resumeupdate;
+package com.resumeupdate;
 import com.testngclass.RetryAnalyzer;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
