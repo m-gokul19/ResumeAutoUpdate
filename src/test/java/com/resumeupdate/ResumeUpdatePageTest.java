@@ -19,7 +19,7 @@ public class ResumeUpdatePageTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
-        options.addArguments("headless");
+        options.addArguments("--headless=new");
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.naukri.com/");
         By element = By.id("login_Layer");
